@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Face Sign up</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/linearicons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/css/owl.carousel.css">
+    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../static/css_team/style.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css_team/bootstrap.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <script>{{ans}}</script>
+
+</head>
+
+<style type="text/css">
+    #banner {
+        height: 40%;
+        width: 105%;
+        background-color: black;
+
+    }
+
+    #banner_tag {
+        padding: 10px;
+        position: relative;
+        color: white;
+        margin-left: 35%;
+    }
+
+    #button {
+        position: relative;
+        margin-left: 10%;
+    }
+
+    #form-input {
+        position: relative;
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 5%;
+    }
+</style>
+
+<body style="overflow-x: hidden">
+    <div id="banner" class="row fullscreen">
+        <h2 id="banner_tag">Welcome to the Face Sign Up</h2>
+    </div>
+
+    <div id="input">
+        <div id="form-input">
+            <form method="POST" action="{{ url_for('register') }}">
+                <div class="form-group">
+                    <label for="email" style="color:black; font-size:20pt;margin-bottom:10px;">Email address </label>
+                    <input type="email" class="form-control" name="mail" id="mail" aria-describedby="emailHelp"
+                        placeholder="Enter email" style="font-size:17pt; height:40px;" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" style="color:black; font-size:20pt;margin-bottom:10px;">Username</label>
+                    <input type="name" class="form-control" name="uname" id="uname" placeholder="Enter name"
+                        style="font-size:17pt; height:40px;" required>
+                </div>
+
+                <div class="form-group"><b>{{ans}}</b></div>
+
+                <div class="form-group">
+                    <label for="email" style="color:black; font-size:20pt;margin-bottom:10px;">Password</label>
+                    <input type="password" class="form-control" name="passw" id="passw" placeholder="Password"
+                        style="font-size:17pt; height:40px;" required>
+                </div>
+                <button id="button" type="submit" class="btn btn-success" style="vertical-align:middle"> Sign up
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
